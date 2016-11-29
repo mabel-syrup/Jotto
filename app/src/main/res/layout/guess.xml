@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/guess_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/guess_size"
+        android:textAllCaps="true"
+        tools:text="jotto"/>
+    <TextView
+        android:id="@+id/guess_points"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/alphabet_spacing"
+        android:layout_marginRight="@dimen/alphabet_spacing"
+        android:textSize="@dimen/guess_size"
+        android:textColor="@color/colorTextMed"
+        android:background="@color/bg_medium"
+        tools:text="1"/>
+
+</LinearLayout>

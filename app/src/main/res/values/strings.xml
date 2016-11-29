@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Jotto</string>
+    <string name="title">Jotto</string>
+    <string name="note_button_text">Notepad</string>
+</resources>

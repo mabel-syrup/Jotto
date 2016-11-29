@@ -2,4 +2,5 @@
     <string name="app_name">Jotto</string>
     <string name="title">Jotto</string>
     <string name="note_button_text">Notepad</string>
+    <string name="guess_enter_button_text">GUESS</string>
 </resources>

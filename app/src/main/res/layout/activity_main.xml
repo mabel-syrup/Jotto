@@ -42,6 +42,25 @@
             android:textAlignment="center"/>
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/them"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/us"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/guess_bar"
         android:layout_width="wrap_content"
@@ -73,20 +92,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_below="@id/title_bar"
-        android:layout_above="@id/guess_bar">
+        android:layout_below="@id/header_bar"
+        android:layout_above="@id/guess_bar"
+        android:baselineAligned="false">
         <ListView
             android:id="@+id/their_guesses"
             android:layout_weight="1"
             android:layout_gravity="left"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent"
+            >
+
+        </ListView>
+        <View
+            android:layout_width="@dimen/alphabet_spacing"
+            android:layout_height="match_parent"
+            android:background="@color/bg_medium">
+
+        </View>
         <ListView
             android:id="@+id/my_guesses"
             android:layout_gravity="right"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent">
+
+        </ListView>
     </LinearLayout>
 
 

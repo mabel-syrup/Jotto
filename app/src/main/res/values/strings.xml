@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Jotto</string>
-    <string name="title">Jotto</string>
-    <string name="note_button_text">Notepad</string>
+    <string name="app_name">Parse</string>
+    <string name="title">Parse</string>
+    <string name="note_button_text">Restart</string>
     <string name="guess_enter_button_text">GUESS</string>
+    <string name="word_enter_button_text">SET</string>
+    <string name="us">US</string>
+    <string name="them">THEM</string>
 </resources>

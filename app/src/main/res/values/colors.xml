@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="bg_medium">#E0E0E0</color>
     <color name="colorTextMed">#A0A0A0</color>
+    <color name="colorAccentBG">#FF80C1</color>
 </resources>

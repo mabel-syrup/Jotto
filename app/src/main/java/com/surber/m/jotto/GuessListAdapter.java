@@ -36,7 +36,6 @@ public class GuessListAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        System.out.println("VIEW UPDATED");
         View vi = convertView;
         if(vi == null){
             vi = inflater.inflate(R.layout.guess, null);

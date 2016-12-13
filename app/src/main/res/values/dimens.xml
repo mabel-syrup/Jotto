@@ -5,4 +5,5 @@
     <dimen name="title_size">36dp</dimen>
     <dimen name="guess_size">24dp</dimen>
     <dimen name="alphabet_spacing">6dp</dimen>
+    <dimen name="header_title">120dp</dimen>
 </resources>

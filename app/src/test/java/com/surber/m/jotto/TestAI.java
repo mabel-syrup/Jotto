@@ -14,8 +14,6 @@ import static org.junit.Assert.*;
  */
 public class TestAI {
 
-    //Right-click on this file and select Run to run the unit tests; you don't need to start your application. 
-    
     AI testAI;
 
     @Before
@@ -39,7 +37,7 @@ public class TestAI {
 
         //Scenario 1: alphabet has more than 15; mockKnown has more than 2  - we know a lot
         ArrayList<Character> mockAlphabet = new ArrayList<>();
-        for (char ch = 65; ch < 65+17 ; ch++) {
+        for (char ch = 65; ch < 65 + 17; ch++) {
             mockAlphabet.add(ch);
         }
 
@@ -61,4 +59,28 @@ public class TestAI {
     // TODO write more methods, one to test each part of the AI functionality.
     // First, break your AI code into smaller, more focused methods.
 
+    //Assumes you move compareGuess out of MainActivity and into AI
+    
+    @Test
+    public void testCompareGuess() {
+
+        String exampleWord = "chair";
+        String exampleGuess = "mouse";
+        int expectedCompare = 0;
+
+        assertEquals(0, testAI.compareGuess(exampleGuess, exampleWord));
+
+        exampleWord = "chair";
+        exampleGuess = "chose";
+        expectedCompare = 2;
+
+        assertEquals(expectedCompare, testAI.compareGuess(exampleGuess, exampleWord));
+
+        exampleWord = "chair";
+        exampleGuess = "chair";
+        expectedCompare = 5;
+
+        assertEquals(expectedCompare, testAI.compareGuess(exampleGuess, exampleWord));
+
+    }
 }

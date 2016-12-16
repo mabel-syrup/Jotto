@@ -280,11 +280,27 @@ public class AI {
         return changed;
     }
 
+    // Named constants are better than 'magic numbers'. What is 15? Or 2? 2 letters, 2 bags of chips, 2 penguins...? What does it mean?
+    // A constant with the same value is much more readable, can be re-used, and easier
+    // to find and change if needed - maybe you'll have some parameters you'll change to make the AI a better or worse player?
+    // This isn't actually an AI - you'd need to do some machine learning activities, you may want to
+    // consider renaming this something like ComputerPlayer... or implementing machine learning -
+    // you could definitely have a computer that learns from the style of the words the human chooses
+    // and uses that to make more informed guesses. A little out of the scope of this class but an interesting side project!
 
+    final int MANY_LETTERS_LEFT_LIMIT = 15;   //todo better name
+    final int SMALL_AMOUNT_KNOWN = 2;         //todo better name
+
+    // Extract one part of the logic into a separate function
+    // maybe rename this knowMuch() and reverse the truth of the return? Design decision for you.
+    // Why? So we can write a test.
+    public boolean dontKnowMuch() {
+        return (alphabet.size() > MANY_LETTERS_LEFT_LIMIT && known.size() < SMALL_AMOUNT_KNOWN);
+    }
 
     public String guess(){
 
-        if(alphabet.size() > 15 && known.size() < 2){
+        if(dontKnowMuch()){
             //We know very little right now, so we'll just guess some very different words to get the ball rolling.
             return diverisfy();
         }else {
